@@ -1,4 +1,7 @@
 .Button {
     background-color: transparent;
     color: yellow;
+    &:hover {
+        background-color: black;
+    }
 }
