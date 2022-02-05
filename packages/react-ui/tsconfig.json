@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "esnext",
+    "lib": [
+      "es6",
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+    ],
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "rootDirs": [
+      "src/",
+    ],
+    "baseUrl": "./",
+    "outDir": "dist/types",
+    "jsx": "react-jsx",
+  },
+  "exclude": [
+    "**/*.stories.tsx",
+    "./dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "./src/stories/*/**",
+    "./src/tests/*/**",
+  ]
+}
