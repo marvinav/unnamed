@@ -1,0 +1,23 @@
+{
+  "name": "@marvinav/eslint-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "marvinav",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "eslint-plugin-jest": "^25",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^4",
+    "eslint-plugin-unicorn": "^39",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-testing-library": "^5",
+    "eslint-config-prettier": "^8",
+    "eslint-plugin-prettier": "^4"
+  },
+  "peerDependencies": {
+    "eslint": "^7 || ^8",
+    "prettier": "^2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marvinav",
+  "license": "MIT",
+  "devDependencies": {
+    "@marvinav/eslint-plugin": "workspace:^1.0.0",
+    "eslint": "^8",
+    "prettier": "^2",
+    "typescript": "^2"
+  }
+}
