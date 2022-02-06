@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { renderHook } from '@testing-library/react-hooks';
+import { createBooleanAttribute, parseBooleanAttribute } from './boolean-attribute';
 
 import { useClassname } from './use-classname';
 
@@ -33,5 +34,23 @@ describe('use-classname', () => {
     it('Styled component return base merged with suffix and prefix', () => {
         const { result } = renderHook(() => useClassname('base', { suffix: 'suffix', prefix: 'prefix' }));
         expect(result.current).toBe('prefix base suffix');
+    });
+});
+
+describe('boolean-attribute', () => {
+    it('parsed falsy value return false', () => {
+        expect(parseBooleanAttribute()).toBe(false);
+    });
+
+    it('parsed not empty value return true', () => {
+        expect(parseBooleanAttribute('')).toBe(true);
+    });
+
+    it('created true return empty string', () => {
+        expect(createBooleanAttribute(true)).toBe('');
+    });
+
+    it('created false return undefined', () => {
+        expect(createBooleanAttribute(false)).toBeUndefined();
     });
 });

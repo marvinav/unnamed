@@ -1,0 +1,15 @@
+:root {
+    /** || Colors */
+    --primary-bg-lx4: #d4d4d7;
+    --primary-bg-lx3: #a9aaaf;
+    --primary-bg-lx2: #7e7f86;
+    --primary-bg-lx1: #53555e;
+    --primary-bg: #282a36;
+    --primary-bg-dx1: #20222b;
+    --primary-bg-dx2: #181920;
+    --primary-bg-dx3: #101116;
+    --primary-bg-dx4: #08080b;
+
+    --text-color-lx4: 
+    --text-color: #f8f8f2;
+}

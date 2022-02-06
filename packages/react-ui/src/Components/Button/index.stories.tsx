@@ -9,7 +9,9 @@ export default {
 
 const Template: ComponentStory<typeof Button> = () => (
     <>
-        <Button>Primary</Button>
+        <Button>Regular</Button>
+        <Button rounded>Primary</Button>
+        <Button baseProperties={{ isUnstyled: true }}>Unstyled</Button>
     </>
 );
 

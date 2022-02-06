@@ -17,7 +17,8 @@
         "test": "jest",
         "lint": "pnpm run lint:js",
         "lint:js": "pnpm eslint 'src/**/*.{js,ts,tsx}'",
-        "lint-fix": "pnpm eslint 'src/**/*.{js,ts,tsx}' --fix"
+        "lint-fix": "pnpm eslint 'src/**/*.{js,ts,tsx}' --fix",
+        "storybook": "start-storybook"
     },
     "author": "marvinav",
     "license": "ISC",

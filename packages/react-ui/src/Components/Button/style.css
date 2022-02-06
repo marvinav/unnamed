@@ -1,7 +1,19 @@
 .Button {
-    background-color: transparent;
+    background-color: var(--primary-bg);
     color: yellow;
     &:hover {
-        background-color: black;
+        background-color: var(--primary-bg-lx2);
     }
+    &:active {
+        background-color: var(--primary-bg-dx4);
+    }
+}
+
+.Button[data-rounded] {
+    border-radius: 0.5rem;
+}
+
+.Button[data-size='md'] {
+    height: 2rem;
+    font-size: 1rem;
 }
