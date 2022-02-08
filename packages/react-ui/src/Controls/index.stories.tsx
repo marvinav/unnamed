@@ -10,8 +10,8 @@ export default {
 const Template: ComponentStory<typeof Button> = () => (
     <Flex>
         <Button> Regular </Button>
-        <Button> Destructive </Button>
-        <Button> Suggested </Button>
+        <Button color="destructive"> Destructive </Button>
+        <Button color="suggested"> Suggested </Button>
     </Flex>
 );
 

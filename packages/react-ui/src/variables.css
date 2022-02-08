@@ -10,6 +10,36 @@
     --primary-bg-dx3: #101116;
     --primary-bg-dx4: #08080b;
 
+    --blue-bg-lx4: #92b7cd;
+    --blue-bg-lx3: #7ca9c2;
+    --blue-bg-lx2: #518cae;
+    --blue-bg-lx1: #3b7da4;
+    --blue-bg: #256f9a;
+    --blue-bg-dx1: #21648b;
+    --blue-bg-dx2: #1e597b;
+    --blue-bg-dx3: #1a4e6c;
+    --blue-bg-dx4: #13384d;
+
+    --cyan-bg-lx4: #dcf8fe;
+    --cyan-bg-lx3: #c5f4fe;
+    --cyan-bg-lx2: #b9f2fe;
+    --cyan-bg-lx1: #a2edfd;
+    --cyan-bg: #8be9fd;
+    --cyan-bg-dx1: #7dd2e4;
+    --cyan-bg-dx2: #6fbaca;
+    --cyan-bg-dx3: #538c98;
+    --cyan-bg-dx4: #385d65;
+
+    --red-bg-lx4: #ffbbbb;
+    --red-bg-lx3: #ffbbbb;
+    --red-bg-lx2: #ff9999;
+    --red-bg-lx1: #ff6666;
+    --red-bg: #ff5555;
+    --red-bg-dx1: #e64d4d;
+    --red-bg-dx2: #cc4444;
+    --red-bg-dx3: #b33b3b;
+    --red-bg-dx4: #993333;
+
     --text-color-lx4: #fdfdfb;
     --text-color-lx3: #fcfcf9;
     --text-color-lx2: #fbfbf7;

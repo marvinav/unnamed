@@ -1,26 +1,58 @@
 .Button {
-    outline: none;
-    background-color: var(--primary-bg);
     border-radius: 0.5rem;
-
     color: var(--text-color);
-
-    border: 0;
-
-    &:hover {
-        background-color: var(--primary-bg-lx2);
-    }
-    &:active {
-        background-color: var(--primary-bg-dx4);
-    }
-
-    &:focus {
-    }
-
+    border: none;
     flex: 1;
 }
 
 .Button[data-size='md'] {
     height: 2rem;
     font-size: 1rem;
+}
+
+.Button {
+    &[data-color='regular'] {
+        background-color: var(--primary-bg);
+
+        &:hover {
+            background-color: var(--primary-bg-lx1);
+        }
+        &:active {
+            background-color: var(--primary-bg-dx1);
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.2rem var(--primary-bg-lx1);
+            outline: var(--primary-bg-lx1) solid 0.2rem;
+        }
+    }
+
+    &[data-color='destructive'] {
+        background-color: var(--red-bg);
+
+        &:hover {
+            background-color: var(--red-bg-lx1);
+        }
+        &:active {
+            background-color: var(--red-bg-dx1);
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.2rem var(--red-bg-lx1);
+            outline: var(--red-bg-lx1) solid 0.2rem;
+        }
+    }
+
+    &[data-color='suggested'] {
+        background-color: var(--blue-bg);
+
+        &:hover {
+            background-color: var(--blue-bg-lx1);
+        }
+        &:active {
+            background-color: var(--blue-bg-dx1);
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.2rem var(--blue-bg-lx1);
+            outline: var(--blue-bg-lx1) solid 0.2rem;
+        }
+    }
 }
