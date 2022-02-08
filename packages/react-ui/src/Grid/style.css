@@ -1,0 +1,5 @@
+.Grid {
+    display: grid;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
+}

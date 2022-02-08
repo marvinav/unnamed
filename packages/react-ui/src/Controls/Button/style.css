@@ -1,16 +1,23 @@
 .Button {
+    outline: none;
     background-color: var(--primary-bg);
-    color: yellow;
+    border-radius: 0.5rem;
+
+    color: var(--text-color);
+
+    border: 0;
+
     &:hover {
         background-color: var(--primary-bg-lx2);
     }
     &:active {
         background-color: var(--primary-bg-dx4);
     }
-}
 
-.Button[data-rounded] {
-    border-radius: 0.5rem;
+    &:focus {
+    }
+
+    flex: 1;
 }
 
 .Button[data-size='md'] {

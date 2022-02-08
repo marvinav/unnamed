@@ -12,7 +12,6 @@ export interface ButtonProperties
     variant?: 'solid' | 'outlined' | 'ghost';
     // Default variant md
     size?: 'sm' | 'md' | 'lg';
-    rounded?: boolean;
 }
 
 export const Button: React.FC<ButtonProperties> = ({
@@ -20,21 +19,13 @@ export const Button: React.FC<ButtonProperties> = ({
     color = 'regular',
     variant = 'solid',
     size = 'md',
-    rounded,
     baseProperties,
     ...rest
 }) => {
     const className = useClassname(styles.Button, baseProperties);
 
     return (
-        <button
-            data-color={color}
-            data-variant={variant}
-            data-size={size}
-            className={className}
-            data-rounded={createBooleanAttribute(rounded)}
-            {...rest}
-        >
+        <button data-color={color} data-variant={variant} data-size={size} className={className} {...rest}>
             {children}
         </button>
     );

@@ -10,6 +10,13 @@
     --primary-bg-dx3: #101116;
     --primary-bg-dx4: #08080b;
 
-    --text-color-lx4: 
+    --text-color-lx4: #fdfdfb;
+    --text-color-lx3: #fcfcf9;
+    --text-color-lx2: #fbfbf7;
+    --text-color-lx1: #f9f9f5;
     --text-color: #f8f8f2;
+    --text-color-dx1: #c6c6c2;
+    --text-color-dx2: #959591;
+    --text-color-dx3: #636361;
+    --text-color-dx4: #323230;
 }

@@ -3,15 +3,15 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Button } from './index';
 
 export default {
-    title: 'Components/Button',
+    title: 'Controls/Button',
     component: Button,
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = () => (
     <>
-        <Button>Regular</Button>
-        <Button rounded>Primary</Button>
-        <Button baseProperties={{ isUnstyled: true }}>Unstyled</Button>
+        <Button color="regular">Regular</Button>
+        <Button color="suggested">Suggested</Button>
+        <Button color="destructive">Destructive</Button>
     </>
 );
 
