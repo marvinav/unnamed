@@ -3,7 +3,15 @@ import { useClassname } from '../utils';
 
 import styles from './style.css';
 
-export const Flex: React.FC<{ baseProperties?: BaseProperties }> = ({ children, baseProperties }) => {
+export const Flex: React.FC<{ baseProperties?: BaseProperties; direction?: 'row' | 'col' }> = ({
+    children,
+    baseProperties,
+    direction,
+}) => {
     const className = useClassname(styles.Flex, baseProperties);
-    return <div className={className}>{children}</div>;
+    return (
+        <div data-direction={direction} className={className}>
+            {children}
+        </div>
+    );
 };

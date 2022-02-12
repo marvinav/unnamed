@@ -1,0 +1,201 @@
+.Toggle {
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+    margin: 0;
+    outline-offset: -0.35rem;
+}
+
+.Toggle > span {
+    user-select: none;
+    padding: 0.25rem 0.5rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+    z-index: 1;
+    display: flex;
+    column-gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+    border: transparent solid;
+    pointer-events: none;
+}
+
+.Toggle input {
+    position: absolute;
+    appearance: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    box-sizing: border-box;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+}
+
+.Toggle span {
+    svg,
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    &[data-size='md'] {
+        height: 2.5rem;
+        font-size: 1rem;
+        svg,
+        img {
+            max-height: 1rem;
+            min-width: 1rem;
+            min-height: 1rem;
+        }
+    }
+
+    &[data-size='sm'] {
+        height: 2rem;
+        font-size: 1rem;
+        svg,
+        img {
+            max-height: 0.75rem;
+            min-width: 0.75rem;
+            min-height: 0.75rem;
+        }
+    }
+
+    &[data-size='lg'] {
+        height: 3rem;
+        font-size: 1.5rem;
+        svg,
+        img {
+            max-height: 1.5rem;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+        }
+    }
+}
+
+.Toggle input {
+    background-color: var(--bg-btn);
+    border: var(--border-btn);
+    border-width: var(--border-width);
+    box-shadow: var(--shadow-btn);
+
+    &:focus,
+    &:focus-visible {
+        outline: var(--outline);
+        background-color: var(--bg-btn-focused, var(--bg-btn));
+        box-shadow: var(--shadow-btn-focused);
+    }
+
+    &:hover {
+        background-color: var(--bg-btn-hovered, var(--bg-btn));
+        box-shadow: var(--shadow-btn-hovered);
+    }
+    &:active {
+        background-color: var(--bg-btn-activated, var(--bg-btn));
+        box-shadow: var(--shadow-btn-activated);
+    }
+
+    &:checked {
+        background-color: var(--bg-btn-checked, var(--bg-btn));
+        box-shadow: var(--checked-shadow-btn);
+        &:disabled {
+            box-shadow: var(--checked-disabled-shadow-btn);
+        }
+    }
+
+    &:checked:not(:disabled) {
+        background-color: var(--checked-bg-btn);
+        border: var(--checked-border-btn);
+        border-width: var(--border-width-btn);
+
+        &:hover {
+            background-color: var(--checked-bg-btn-hovered, var(--checked-bg-btn));
+        }
+        &:active {
+            background-color: var(--checked-bg-btn-activated, var(--checked-bg-btn));
+        }
+    }
+
+    &:disabled {
+        background-color: var(--disabled-bg-btn);
+        color: var(--disabled-color-btn);
+    }
+}
+
+.Toggle[data-variant='solid'] input {
+    --border-width: var(--border-width-btn);
+
+    &[data-color='regular']:not(:disabled) {
+        --bg-btn: var(--regular-bg-btn);
+        --color-btn: var(--regular-color-btn);
+        --bg-btn-hovered: var(--regular-bg-btn-hovered);
+        --color-btn-hovered: var(--regular-color-btn-hovered);
+        --bg-btn-activated: var(--regular-bg-btn-activated);
+        --color-btn-activated: var(--regular-color-btn-activated);
+
+        --border-btn: var(--regular-border-btn);
+
+        --shadow-btn: var(--regular-shadow-btn);
+        --shadow-btn-hovered: var(--regular-shadow-btn-hovered);
+        --shadow-btn-activated: var(--regular-shadow-btn-activated);
+
+        & + span {
+            color: var(--regular-color-btn);
+            border: var(--regular-border-btn);
+            border-width: var(--border-width-btn);
+            border-color: transparent;
+        }
+    }
+
+    &:disabled {
+        --bg-btn: var(--disabled-bg-btn);
+        --color-btn: var(--disabled-color-btn);
+        --border-btn: var(--disabled-border-btn);
+        & + span {
+            color: var(--disabled-color-btn);
+            border: var(--disabled-border-btn);
+            border-width: var(--border-width-btn);
+            border-color: transparent;
+        }
+    }
+}
+
+.Toggle[data-variant='outlined'] input {
+    --border-width: var(--border-width-btn);
+    &[data-color='regular']:not(:disabled) {
+        --bg-btn: var(--regular-bg-btn-outlined);
+        --color-btn: var(--regular-color-btn-outlined);
+        --bg-btn-hovered: var(--regular-bg-btn-outlined-hovered);
+        --color-btn-hovered: var(--regular-color-btn-outlined-hovered);
+        --bg-btn-activated: var(--regular-bg-btn-outlined-activated);
+        --color-btn-activated: var(--regular-color-btn-outlined-activated);
+
+        --border-btn: var(--regular-border-btn-outlined);
+
+        --shadow-btn: var(--regular-shadow-btn-outlined);
+        --shadow-btn-hovered: var(--regular-shadow-btn-outlined-hovered);
+        --shadow-btn-activated: var(--regular-shadow-btn-outlined-activated);
+
+        & + span {
+            color: var(--regular-color-btn-outlined);
+            border: var(--regular-border-btn-outlined);
+            border-color: transparent;
+            border-width: var(--border-width-btn);
+        }
+    }
+
+    &:disabled {
+        --bg-btn: var(--disabled-bg-btn-outlined);
+        --color-btn: var(--disabled-color-btn-outlined);
+        --border-btn: var(--disabled-border-btn-outlined);
+        & + span {
+            color: var(--regular-color-btn-outlined);
+            border: var(--regular-border-btn-outlined);
+            border-color: transparent;
+            border-width: var(--border-width-btn);
+        }
+    }
+}

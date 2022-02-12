@@ -1,5 +1,6 @@
 {
     "eslint.packageManager": "pnpm",
+    "jestrunner.jestCommand": "pnpm exec jest",
     "cSpell.words": [
         "Unstyled"
     ]

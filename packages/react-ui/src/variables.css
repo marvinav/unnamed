@@ -1,14 +1,14 @@
 :root {
     /** || Colors */
-    --primary-bg-lx4: #d4d4d7;
-    --primary-bg-lx3: #a9aaaf;
-    --primary-bg-lx2: #7e7f86;
-    --primary-bg-lx1: #53555e;
-    --primary-bg: #282a36;
-    --primary-bg-dx1: #20222b;
-    --primary-bg-dx2: #181920;
-    --primary-bg-dx3: #101116;
-    --primary-bg-dx4: #08080b;
+    --text-color-lx4: #d4d4d7;
+    --text-color-lx3: #a9aaaf;
+    --text-color-lx2: #7e7f86;
+    --text-color-lx1: #53555e;
+    --text-color: #282a36;
+    --text-color-dx1: #20222b;
+    --text-color-dx2: #181920;
+    --text-color-dx3: #101116;
+    --text-color-dx4: #08080b;
 
     --blue-bg-lx4: #92b7cd;
     --blue-bg-lx3: #7ca9c2;
@@ -40,13 +40,94 @@
     --red-bg-dx3: #b33b3b;
     --red-bg-dx4: #993333;
 
-    --text-color-lx4: #fdfdfb;
-    --text-color-lx3: #fcfcf9;
-    --text-color-lx2: #fbfbf7;
-    --text-color-lx1: #f9f9f5;
-    --text-color: #f8f8f2;
-    --text-color-dx1: #c6c6c2;
-    --text-color-dx2: #959591;
-    --text-color-dx3: #636361;
-    --text-color-dx4: #323230;
+    --primary-bg-lx4: #fdfdfb;
+    --primary-bg-lx3: #f4f4f3;
+    --primary-bg-lx2: #e8e8e7;
+    --primary-bg-lx1: #e3e3e1;
+    --primary-bg: #d7d7d4;
+    --primary-bg-dx1: #c6c6c2;
+    --primary-bg-dx2: #959591;
+    --primary-bg-dx3: #636361;
+    --primary-bg-dx4: #323230;
+
+    --outline: black dashed 1px;
+
+    --border-width-btn: 1px;
+
+    --regular-bg-btn: var(--primary-bg);
+    --regular-bg-btn-hovered: var(--primary-bg-lx1);
+    --regular-bg-btn-activated: var(--primary-bg-dx1);
+    --regular-color-btn: black;
+    --regular-color-btn-hovered: black;
+    --regular-color-btn-activated: black;
+    /* --regular-shadow-btn: 0 0 4px 1px var(--primary-bg-dx1); */
+    --regular-border-btn: 2px solid transparent;
+
+    --destructive-bg-btn: var(--red-bg);
+    --destructive-bg-btn-hovered: var(--red-bg-dx1);
+    --destructive-bg-btn-activated: var(--red-bg-dx2);
+    --destructive-color-btn: white;
+    --destructive-color-btn-hovered: white;
+    --destructive-color-btn-activated: white;
+    --destructive-border-btn: 2px solid transparent;
+    /* --destructive-shadow-btn: 0 0 4px 1px var(--red-bg-lx2); */
+
+    --suggested-bg-btn: var(--blue-bg);
+    --suggested-bg-btn-hovered: var(--blue-bg-lx1);
+    --suggested-bg-btn-activated: var(--blue-bg-dx1);
+    --suggested-color-btn: white;
+    --suggested-color-btn-hovered: white;
+    --suggested-color-btn-activated: white;
+    /* --suggested-shadow-btn: 0 0 4px 1px var(--blue-bg-lx2); */
+    --suggested-border-btn: 2px solid transparent;
+
+    --checked-shadow-btn: 0 0 6px 1px var(--primary-bg-dx4) inset;
+    --checked-bg-btn: var(--primary-bg-dx1);
+    --checked-bg-btn-hovered: var(--primary-bg);
+    --checked-bg-btn-activated: var(--primary-bg-dx2);
+    --checked-color-btn: white;
+    --checked-color-btn-hovered: white;
+    --checked-color-btn-activated: white;
+
+    --checked-disabled-shadow-btn: 0 0 6px 1px var(--primary-bg) inset;
+
+    --disabled-bg-btn: var(--primary-bg-lx3);
+    --disabled-color-btn: var(--primary-bg-dx1);
+    --disabled-border-btn: 2px solid var(--primary-bg-lx2);
+
+    --regular-bg-btn-outlined: none;
+    --regular-bg-btn-outlined-hovered: var(--regular-bg-btn-hovered);
+    --regular-bg-btn-outlined-activated: var(--regular-bg-btn-activated);
+    --regular-color-btn-outlined: var(--primary-bg-dx3);
+    --regular-color-btn-outlined-hovered: var(--primary-bg-dx3);
+    --regular-color-btn-outlined-activated: var(--primary-bg-dx3);
+    --regular-border-btn-outlined: 2px solid var(--primary-bg-dx3);
+    --regular-shadow-btn-outlined: 0 0 4px 1px var(--primary-bg-dx1);
+
+    --destructive-bg-btn-outlined: none;
+    --destructive-bg-btn-outlined-hovered: var(--red-bg-dx1);
+    --destructive-bg-btn-outlined-activated: var(--red-bg-dx2);
+    --destructive-color-btn-outlined: var(--red-bg-dx2);
+    --destructive-color-btn-outlined-hovered: white;
+    --destructive-color-btn-outlined-activated: white;
+    --destructive-border-btn-outlined: 2px solid var(--red-bg-dx2);
+    --destructive-shadow-btn-outlined: 0 0 4px 1px var(--red-bg-lx2);
+
+    --suggested-bg-btn-outlined: none;
+    --suggested-bg-btn-outlined-hovered: var(--blue-bg-lx1);
+    --suggested-bg-btn-outlined-activated: var(--blue-bg-dx1);
+    --suggested-color-btn-outlined: var(--blue-bg-dx2);
+    --suggested-color-btn-outlined-hovered: white;
+    --suggested-color-btn-outlined-activated: white;
+    --suggested-border-btn-outlined: 2px solid var(--blue-bg-dx2);
+    --suggested-shadow-btn-outlined: 0 0 4px 1px var(--blue-bg-lx2);
+
+    --disabled-bg-btn-outlined: none;
+    --disabled-color-btn-outlined: var(--primary-bg-dx1);
+    --disabled-border-btn-outlined: 2px solid var(--primary-bg-lx2);
+
+    --border-width-btn: 2px;
+    --border-width-btn-outlined: 2px;
+
+    --shadow-control: 0 0 4px 1px var(--regular-bg-dx1);
 }

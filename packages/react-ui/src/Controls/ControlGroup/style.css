@@ -1,0 +1,199 @@
+.ControlGroup {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    button {
+        border-radius: 0;
+    }
+
+    [data-control] input {
+        border-radius: 0;
+    }
+
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+    [data-control] {
+        --regular-shadow-btn: none;
+        --regular-shadow-btn-outlined: none;
+        --destructive-shadow-btn: none;
+        --destructive-shadow-btn-outlined: none;
+        --suggested-shadow-btn: none;
+        --suggested-shadow-btn-outlined: none;
+
+        &:focus-within {
+            z-index: 100;
+        }
+    }
+}
+
+.ControlGroup[data-direction='row'] {
+    flex-direction: row;
+
+    button[data-variant='outlined'] {
+        border-top: var(--border-width-btn-outlined);
+        border-bottom: var(--border-width-btn-outlined);
+        &:first-child {
+            border-left: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+
+        &:last-child {
+            border-right: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+    }
+
+    [data-variant='outlined']:not(button) {
+        input {
+            border-top: var(--border-width-btn-outlined);
+            border-bottom: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+
+        &:first-child input {
+            border-left: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+
+        &:last-child input {
+            border-right: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+    }
+
+    button[data-control] {
+        border-color: black;
+        border-style: solid;
+    }
+
+    [data-control] input {
+        border-color: black;
+        border-style: solid;
+    }
+
+    [data-control] + button[data-control] {
+        --border-width-btn: 0px 0px 0px 1px;
+    }
+
+    [data-control] + [data-control] {
+        input {
+            --border-width-btn: 0px 0px 0px 1px;
+        }
+        span {
+            --border-width-btn: 0px 0px 0px 1px;
+        }
+    }
+
+    & > button[data-control]:first-child {
+        --border-width-btn: 0;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    & > button[data-control]:last-child {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    & > [data-control]:not(button):first-child {
+        input {
+            --border-width-btn: 0;
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+        span {
+            --border-width-btn: 0;
+        }
+    }
+
+    & > [data-control]:not(button):last-child {
+        input {
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+    }
+}
+
+.ControlGroup[data-direction='col'] {
+    flex-direction: column;
+
+    button[data-variant='outlined'] {
+        border-left: var(--border-width-btn-outlined);
+        border-right: var(--border-width-btn-outlined);
+        &:first-child {
+            border-top: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+
+        &:last-child {
+            border-bottom: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+    }
+
+    [data-variant='outlined']:not(button) {
+        input {
+            border-left: var(--border-width-btn-outlined);
+            border-right: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+
+        &:first-child input {
+            border-top: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+
+        &:last-child input {
+            border-bottom: var(--border-width-btn-outlined);
+            border-color: black;
+            border-style: solid;
+        }
+    }
+
+    button[data-control] {
+        border-color: black;
+        border-style: solid;
+    }
+
+    [data-control] input {
+        border-color: black;
+        border-style: solid;
+    }
+
+    [data-control] + button[data-control] {
+        --border-width-btn: 1px 0px 0px 0px;
+    }
+
+    [data-control] + [data-control] {
+        input {
+            --border-width-btn: 1px 0px 0px 0px;
+        }
+    }
+
+    & > button[data-control]:first-child {
+        --border-width-btn: 0;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    & > button[data-control]:last-child {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    & > [data-control]:not(button):first-child {
+        input {
+            --border-width-btn: 0;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+    }
+
+    & > [data-control]:not(button):last-child {
+        input {
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+    }
+}

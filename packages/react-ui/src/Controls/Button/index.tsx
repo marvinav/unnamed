@@ -1,6 +1,5 @@
-import { createBooleanAttribute } from '../../utils/boolean-attribute';
 import { BaseProperties } from '../../types';
-import { useClassname } from '../../utils/use-classname';
+import { useClassname, createBooleanAttribute } from '../../utils';
 import styles from './style.css';
 
 export interface ButtonProperties
@@ -12,12 +11,16 @@ export interface ButtonProperties
     variant?: 'solid' | 'outlined' | 'ghost';
     // Default variant md
     size?: 'sm' | 'md' | 'lg';
+
+    // Apply flex 1 1 auto
+    fluid?: true;
 }
 
 export const Button: React.FC<ButtonProperties> = ({
     children,
     color = 'regular',
     variant = 'solid',
+    fluid,
     size = 'md',
     baseProperties,
     ...rest
@@ -25,7 +28,15 @@ export const Button: React.FC<ButtonProperties> = ({
     const className = useClassname(styles.Button, baseProperties);
 
     return (
-        <button data-color={color} data-variant={variant} data-size={size} className={className} {...rest}>
+        <button
+            data-control=""
+            data-color={color}
+            data-fluid={createBooleanAttribute(fluid)}
+            data-variant={variant}
+            data-size={size}
+            className={className}
+            {...rest}
+        >
             {children}
         </button>
     );

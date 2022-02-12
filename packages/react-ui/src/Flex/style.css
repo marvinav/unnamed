@@ -1,6 +1,12 @@
 .Flex {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    flex: 1 1 auto;
     column-gap: 0.5rem;
     row-gap: 1rem;
+    align-self: baseline;
+    &[data-direction='col'] {
+        flex-direction: column;
+    }
 }
