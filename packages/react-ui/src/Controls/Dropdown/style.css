@@ -1,0 +1,19 @@
+/* The animation code */
+@keyframes example {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 60px;
+    }
+}
+
+/* The element to apply the animation to */
+.Breathing {
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}

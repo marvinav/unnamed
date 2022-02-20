@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { BaseProperties } from '../../types';
 import { useClassname, createBooleanAttribute } from '../../utils';
 import styles from './style.css';
@@ -16,28 +17,27 @@ export interface ButtonProperties
     fluid?: true;
 }
 
-export const Button: React.FC<ButtonProperties> = ({
-    children,
-    color = 'regular',
-    variant = 'solid',
-    fluid,
-    size = 'md',
-    baseProperties,
-    ...rest
-}) => {
-    const className = useClassname(styles.Button, baseProperties);
+const Button = forwardRef<HTMLButtonElement, ButtonProperties>(
+    ({ children, color = 'regular', variant = 'solid', fluid, size = 'md', baseProperties, ...rest }, reference) => {
+        const className = useClassname(styles.Button, baseProperties);
 
-    return (
-        <button
-            data-control=""
-            data-color={color}
-            data-fluid={createBooleanAttribute(fluid)}
-            data-variant={variant}
-            data-size={size}
-            className={className}
-            {...rest}
-        >
-            {children}
-        </button>
-    );
-};
+        return (
+            <button
+                data-control=""
+                data-color={color}
+                data-fluid={createBooleanAttribute(fluid)}
+                data-variant={variant}
+                data-size={size}
+                className={className}
+                {...rest}
+                ref={reference}
+            >
+                {children}
+            </button>
+        );
+    },
+);
+
+Button.displayName = 'Button';
+
+export { Button };

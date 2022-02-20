@@ -141,7 +141,6 @@
             border-color: black;
             border-style: solid;
         }
-
         &:first-child input {
             border-top: var(--border-width-btn-outlined);
             border-color: black;

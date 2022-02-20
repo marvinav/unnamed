@@ -23,9 +23,9 @@ export const Toggle: React.FC<ToggleProperties> = ({
     const className = useClassname(styles.Toggle, baseProperties);
 
     return (
-        <label data-variant={variant} className={className} htmlFor={id} data-control="">
+        <label data-size={size} data-variant={variant} className={className} htmlFor={id} data-control="">
             <input data-color={'regular'} className={className} type={'checkbox'} value={value} id={id} {...rest} />
-            <span data-size={size}>{children}</span>
+            <span>{children}</span>
         </label>
     );
 };
