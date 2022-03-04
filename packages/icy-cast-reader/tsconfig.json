@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "esnext",
+    "lib": [
+      "es6",
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+    ],
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "rootDirs": [
+      "src/",
+    ],
+    "baseUrl": "./",
+    "outDir": "dist/types",
+  },
+  "exclude": [
+    "./dist",
+    "**/*.mock.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "./src/tests/*/**",
+  ]
+}

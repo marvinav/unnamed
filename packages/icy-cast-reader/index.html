@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script type="module">
+            import { IcyCastReader } from './dist/index.esm.js';
+            const reader = new IcyCastReader("http://listen.181fm.com:8014", undefined);
+            console.log(reader.state);
+            reader.start((buff, header) => {
+                console.log({ header });
+            })
+        </script>
+    </body>
+
+</html>

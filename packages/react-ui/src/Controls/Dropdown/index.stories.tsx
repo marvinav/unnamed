@@ -18,19 +18,23 @@ const Template: ComponentStory<typeof Dropdown> = () => {
     const reference = useRef();
 
     return (
-        <Flex>
-            {/* <d  iv className={styles.Breathing}></d> */}
+        <>
+            <div style={{ height: '1000px' }}></div>
+            <Flex>
+                {/* <d  iv className={styles.Breathing}></d> */}
 
-            <Toggle defaultChecked={false}>Toggle</Toggle>
-            <Toggle defaultChecked>Checked</Toggle>
-            <Toggle disabled>Disabled</Toggle>
-            <Button ref={reference} onClick={() => setIsOpen((o) => !o)}>
-                Open
-            </Button>
-            <Dropdown isOpen={isOpen} container={reference.current}>
-                lol
-            </Dropdown>
-        </Flex>
+                <Toggle defaultChecked={false}>Toggle</Toggle>
+                <Toggle defaultChecked>Checked</Toggle>
+                <Toggle disabled>Disabled</Toggle>
+                <Button ref={reference} onClick={() => setIsOpen((o) => !o)}>
+                    Open
+                </Button>
+                <Dropdown isOpen={isOpen} container={reference.current}>
+                    <div style={{ margin: '20px', backgroundColor: 'black' }}>lol</div>
+                </Dropdown>
+            </Flex>
+            <div style={{ height: '1000px' }}></div>
+        </>
     );
 };
 
