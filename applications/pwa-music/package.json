@@ -1,0 +1,34 @@
+{
+    "name": "@marvinav/pwa-music",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "marvinav",
+    "scripts": {
+        "start": "WEBPACK_DEV_SERVE=true NODE_ENV=development webpack serve --mode=development"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.7",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/plugin-proposal-decorators": "^7.17.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+        "@babel/plugin-transform-runtime": "^7.16.8",
+        "@babel/preset-env": "^7.16.8",
+        "@babel/preset-react": "^7.16.7",
+        "@babel/preset-typescript": "^7.16.7",
+        "@marvinav/eslint-plugin": "workspace:^1.0.0",
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+        "assets-webpack-plugin": "^7.1.1",
+        "babel-loader": "^8.2.3",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^10.2.4",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.4.7",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-refresh": "^0.11.0",
+        "react-router-dom": "^6.2.2",
+        "webpack": "^5.66.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.7.4"
+    }
+}

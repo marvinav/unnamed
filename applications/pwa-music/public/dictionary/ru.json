@@ -1,0 +1,18 @@
+{
+    "Hi": "Привет!",
+    "Home": "Домой",
+    "Blog": "Блог",
+    "About": "Обо мне",
+    "Title": "Заголовок",
+    "Error": "Ошибка",
+    "Increase": "Увеличить",
+    "Send": "Отправить",
+    "Cancel": "Отменить",
+    "Log In": "Войти",
+    "Log out": "Выйти",
+    "Role language": "Сменить язык",
+    "Start of dialog": "Начало беседы",
+    "Enter your password": "Введите пароль",
+    "Enter your login": "Введите логин",
+    "Login or password is not correct": "Неверный логин или пароль"
+}
