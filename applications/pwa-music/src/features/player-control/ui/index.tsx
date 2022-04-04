@@ -1,10 +1,9 @@
+import { VFC } from 'react';
 import { ControlGroup } from '@marvinav/react-ui';
 import { useState } from 'react';
-import { NextButton, PlayButton, PreviousButton } from '../../entities/player';
-import { PauseButton } from '../../entities/player/ui/pause-button';
-import { RepeatToggle } from '../../entities/player/ui/repeat-toggle';
+import { NextButton, PlayButton, PreviousButton, PauseButton, RepeatToggle } from '../../../entities/player';
 
-export const Player: React.VFC = () => {
+export const PlayerControl: VFC = () => {
     const [status, setStatus] = useState<'playing' | 'stopped'>('stopped');
 
     return (
