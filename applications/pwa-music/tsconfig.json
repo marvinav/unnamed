@@ -15,20 +15,7 @@
     "noImplicitThis": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
-    "rootDirs": [
-      "src/",
-      "plugins/"
-    ],
-    "baseUrl": "./",
-    "paths": {
-      "@/static/*": [
-        "static/*"
-      ],
-      "@/*": [
-        "src/*"
-      ],
-    },
-    "outDir": "dist/",
+    "outDir": "./dist/",
     "jsx": "react-jsx"
   }
 }

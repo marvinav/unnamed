@@ -88,6 +88,21 @@ var config = {
                 exclude: /node_modules/,
             },
             {
+                test: /\.css$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                config: path.resolve(__dirname, 'postcss.config.js'),
+                            },
+                        },
+                    },
+                ],
+            },
+            {
                 // Загрузчик картинок
                 test: /\.(png|svg|jpg|jpeg|gif|ttf|woff|woff2|eot|otf|json)$/,
                 type: 'asset/resource',
@@ -105,15 +120,11 @@ var config = {
             },
         ],
     },
-    stats: {
-        errorDetails: true,
-    },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-        alias: {
-            '@/static': path.resolve(__dirname, 'static'),
-            '@': path.resolve(__dirname, 'src'),
-        },
+    },
+    stats: {
+        errorDetails: true,
     },
     output: {
         filename: '[name].[contenthash].bundle.js',

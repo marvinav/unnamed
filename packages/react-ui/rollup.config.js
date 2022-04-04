@@ -2,7 +2,8 @@ import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
-import { rmdirSync, existsSync } from 'fs';
+import { rmdirSync, existsSync, copyFileSync, mkdirSync } from 'fs';
+import { join } from 'path';
 import { sync } from 'glob';
 import del from 'rollup-plugin-delete';
 import external from 'rollup-plugin-peer-deps-external';
@@ -20,7 +21,10 @@ const extensions = ['.jsx', '.js', '.tsx', '.ts'];
 
 const plugins = [external(), resolve(extensions), json(), commonjs()];
 
-const styles = sync('./src/components/*/index.tsx').reduce((acc, path) => {
+mkdirSync('./dist/styles', { recursive: true });
+copyFileSync(join(__dirname, './src/variables.css'), join(__dirname, './dist/styles/variables.css'));
+
+const styles = sync('./src/Controls/*/index.tsx').reduce((acc, path) => {
     const entry = path.replace('/index.tsx', '').replace('./src/', '');
     acc.push({
         input: path,
@@ -38,7 +42,6 @@ const styles = sync('./src/components/*/index.tsx').reduce((acc, path) => {
             postcss({
                 extract: true,
                 modules: true,
-                sourceMap: true,
             }),
         ],
     });
