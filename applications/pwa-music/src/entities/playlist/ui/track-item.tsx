@@ -15,7 +15,7 @@ export interface TrackItemProperties {
     type: 'radio' | 'mp3';
 }
 
-export const TrackItem: VFC<TrackItemProperties> = ({ id, title, duration, path, type, meta }) => {
+export const TrackItem: VFC<TrackItemProperties> = ({ id, title, duration }) => {
     return (
         <article id={id}>
             <header>{title}</header>

@@ -1,5 +1,5 @@
 import { VFC } from 'react';
-import { PlayerControl } from '../../../features/player-control';
+import { PlayerControl } from '@/features/player-control';
 
 export const Player: VFC = () => {
     return (

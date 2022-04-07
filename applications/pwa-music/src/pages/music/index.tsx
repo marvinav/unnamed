@@ -1,4 +1,4 @@
-import { Player } from '../../widgets/player';
+import { Player } from '@/widgets/player';
 
 export const Music: React.VFC = () => {
     return (

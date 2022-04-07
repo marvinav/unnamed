@@ -30,6 +30,7 @@ importers:
       '@pmmmwh/react-refresh-webpack-plugin': ^0.5.4
       assets-webpack-plugin: ^7.1.1
       babel-loader: ^8.2.3
+      babel-plugin-module-resolver: ^4.1.0
       clean-webpack-plugin: ^4.0.0
       copy-webpack-plugin: ^10.2.4
       css-loader: ^6.6.0
@@ -62,6 +63,7 @@ importers:
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.4_5ef818c3919d9e29bf1bd49b40aeefcd
       assets-webpack-plugin: 7.1.1_webpack@5.68.0
       babel-loader: 8.2.3_00d3fc9db04af2eae38c4f0956fa29b1
+      babel-plugin-module-resolver: 4.1.0
       clean-webpack-plugin: 4.0.0_webpack@5.68.0
       copy-webpack-plugin: 10.2.4_webpack@5.68.0
       css-loader: 6.6.0_webpack@5.68.0
@@ -201,6 +203,7 @@ importers:
       '@types/jest': ^27.4.0
       '@types/react': ^17.0.38
       babel-loader: ^8.2.3
+      cors-anywhere: ^0.4.4
       jest: ^27.4.7
       rollup: ^2.64.0
       rollup-plugin-peer-deps-external: ^2.2.4
@@ -221,6 +224,7 @@ importers:
       '@types/jest': 27.4.0
       '@types/react': 17.0.39
       babel-loader: 8.2.3
+      cors-anywhere: 0.4.4
       jest: 27.4.7
       rollup: 2.67.0
       rollup-plugin-peer-deps-external: 2.2.4_rollup@2.67.0
@@ -7236,7 +7240,7 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       webpack: 5.68.0_webpack-cli@4.9.2
-      webpack-cli: 4.9.2_webpack@5.68.0
+      webpack-cli: 4.9.2_19108610e47e80b101fe97b50133aa84
     dev: true
 
   /@webpack-cli/info/1.4.1_webpack-cli@4.9.2:
@@ -7245,7 +7249,7 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       envinfo: 7.8.1
-      webpack-cli: 4.9.2_webpack@5.68.0
+      webpack-cli: 4.9.2_19108610e47e80b101fe97b50133aa84
     dev: true
 
   /@webpack-cli/serve/1.6.1_9a0b5ed2553fd0953b975a959afcbb80:
@@ -7975,6 +7979,17 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.0
       cosmiconfig: 7.0.1
+      resolve: 1.22.0
+    dev: true
+
+  /babel-plugin-module-resolver/4.1.0:
+    resolution: {integrity: sha512-MlX10UDheRr3lb3P0WcaIdtCSRlxdQsB1sBqL7W0raF070bGl1HQQq5K3T2vf2XAYie+ww+5AKC/WrkjRO2knA==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      find-babel-config: 1.2.0
+      glob: 7.2.0
+      pkg-up: 3.1.0
+      reselect: 4.1.5
       resolve: 1.22.0
     dev: true
 
@@ -9051,6 +9066,14 @@ packages:
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    dev: true
+
+  /cors-anywhere/0.4.4:
+    resolution: {integrity: sha512-8OBFwnzMgR4mNrAeAyOLB2EruS2z7u02of2bOu7i9kKYlZG+niS7CTHLPgEXKWW2NAOJWRry9RRCaL9lJRjNqg==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      http-proxy: 1.11.1
+      proxy-from-env: 0.0.1
     dev: true
 
   /cosmiconfig/6.0.0:
@@ -10399,6 +10422,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /eventemitter3/1.2.0:
+    resolution: {integrity: sha1-HIaZHYFq0eUEdQ5zh0Ik7PO+xQg=}
+    dev: true
+
   /eventemitter3/4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
     dev: true
@@ -10693,6 +10720,14 @@ packages:
       parseurl: 1.3.3
       statuses: 1.5.0
       unpipe: 1.0.0
+    dev: true
+
+  /find-babel-config/1.2.0:
+    resolution: {integrity: sha512-jB2CHJeqy6a820ssiqwrKMeyC6nNdmrcgkKWJWmpoxpE8RKciYJXCcXRq1h2AzCo5I5BJeN2tkGEO3hLTuePRA==}
+    engines: {node: '>=4.0.0'}
+    dependencies:
+      json5: 0.5.1
+      path-exists: 3.0.0
     dev: true
 
   /find-cache-dir/2.1.0:
@@ -11652,6 +11687,14 @@ packages:
       micromatch: 4.0.4
     transitivePeerDependencies:
       - debug
+    dev: true
+
+  /http-proxy/1.11.1:
+    resolution: {integrity: sha1-cd9VdX6ALVjqgQ3yJEAZ3aBa6F0=}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      eventemitter3: 1.2.0
+      requires-port: 0.0.1
     dev: true
 
   /http-proxy/1.18.1:
@@ -12993,6 +13036,11 @@ packages:
 
   /json-stable-stringify-without-jsonify/1.0.1:
     resolution: {integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=}
+    dev: true
+
+  /json5/0.5.1:
+    resolution: {integrity: sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=}
+    hasBin: true
     dev: true
 
   /json5/1.0.1:
@@ -14418,6 +14466,13 @@ packages:
       find-up: 5.0.0
     dev: true
 
+  /pkg-up/3.1.0:
+    resolution: {integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==}
+    engines: {node: '>=8'}
+    dependencies:
+      find-up: 3.0.0
+    dev: true
+
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
@@ -15459,6 +15514,10 @@ packages:
       ipaddr.js: 1.9.1
     dev: true
 
+  /proxy-from-env/0.0.1:
+    resolution: {integrity: sha1-snxJRunm1dutt1mKZDXTAUxM/Uk=}
+    dev: true
+
   /proxy-from-env/1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: true
@@ -16183,8 +16242,16 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /requires-port/0.0.1:
+    resolution: {integrity: sha1-S0QUQR2d98hVmV3YmajHiilRwW0=}
+    dev: true
+
   /requires-port/1.0.0:
     resolution: {integrity: sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=}
+    dev: true
+
+  /reselect/4.1.5:
+    resolution: {integrity: sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==}
     dev: true
 
   /resolve-cwd/3.0.0:
@@ -18435,7 +18502,7 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.1_acorn@8.7.0+webpack@5.68.0
       watchpack: 2.3.1
-      webpack-cli: 4.9.2_webpack@5.68.0
+      webpack-cli: 4.9.2_19108610e47e80b101fe97b50133aa84
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'

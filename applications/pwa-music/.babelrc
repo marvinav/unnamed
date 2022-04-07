@@ -24,6 +24,24 @@
         ],
         [
             "@babel/plugin-transform-runtime"
+        ],
+        [
+            "module-resolver",
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ],
+                "root": [
+                    "./src"
+                ],
+                "alias": {
+                    // this must be synchronized with tsconfig.json"s path configuration
+                    "@": "./src"
+                }
+            }
         ]
     ]
 }
